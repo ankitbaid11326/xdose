@@ -1,0 +1,167 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="stylesheets/font-awesome4.css">
+		<link rel="stylesheet" href="stylesheets/font-awesomeold3.css">
+		<link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+		<link href="stylesheets/style.css" rel="stylesheet">
+		<link href="stylesheets/content.css" rel="stylesheet">
+		<link href="stylesheets/bootstrap.css" rel="stylesheet">
+		<link rel="stylesheet" href="stylesheets/animate.css">
+		<link rel="stylesheet" href="stylesheets/addpost.css">
+		<link rel="stylesheet" href="stylesheets/Profile.css">
+		<script src="javascripts/wow.min.js"></script>
+		<script src="javascripts/load.js"></script>
+		<script src="javascripts/popup.js"></script>
+		<script src="javascripts/googleapi.js"></script>
+		<script src="javascripts/jquery.js"></script>
+		<script src="javascripts/bootstrap.js"></script>
+		
+		<script>
+		new WOW().init();
+		</script>
+	</head>
+	<body>
+		<div id="load">
+			<i class="fa fa-spinner fa-pulse"></i>
+		</div>
+		<div id="whole">
+			<div id="header">
+				<div id="brand">
+					xDose
+				</div>
+				<ul id="login">
+					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="/logout"><i class="fa fa-sign-out"></i>Logout</a></li>
+					<!-- <li><a href="javascript:myBlurFunction2(1);"><i class="fa fa-pencil-square-o"></i>Sign-Up</a></li>
+					<li><a href="#"><i class="fa fa-phone"></i>Contact-Us</a></li> -->
+				</ul>	
+			</div>
+			
+			<nav class="navbar navbar-default">
+				  <div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					  </button>
+					  <!--<a class="navbar-brand" href="#">Brand</a>-->
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					  <ul class="nav navbar-nav">
+						<li id="ment" align="center"><a href="#">Entertainment <span class="sr-only">(current)</span></a></li>
+						<li id="mtw" align="center"><a href="#">Techie World</a></li>
+						 <li id="mspo" align="center"><a href="#">Sports</a></li>
+						 <li id="mpla" align="center"><a href="#">Places</a></li>
+						 <li id="mhf" align="center"><a href="#">Health & Fitness</a></li>
+						 <li id="midose" align="center"><a href="#">Incredible Dose</a></li>
+					  </ul>
+					  <form class="navbar-form navbar-right" role="search">
+						<div class="form-group">
+						  <input type="text" class="form-control" placeholder="Search">
+						</div>
+						<button type="submit" class="btn btn-default">Submit</button>
+					  </form>
+					 
+					</div><!-- /.navbar-collapse -->
+				  </div><!-- /.container-fluid -->
+				</nav>
+
+			<script>
+			$(function(){
+   var number = 1;
+   $('a.add').click(function(e){
+      e.preventDefault();
+      $('#this_div_contains_settings').append('<div id="settings'+number+'"><div id="panel1"><div id="new_panel"><i class="fa fa-anchor"></i>New Panel</div><input type="text" name="subheading" placeholder="Sub-Heading" id="subheading_text"><div id="content_picture" ></div><input type="file" name="background-image" onchange="readURL(event)" /><textarea rows="5" name="panel" placeholder="Type your content here!" id="panel_content"></textarea></div><a href="#" class="design_button"><i class="fa fa-trash"></i>Remove this Panel</a></div>');
+      number++;
+   });
+   $('#this_div_contains_settings').on('click','a.design_button', function(e){
+      e.preventDefault();
+	$(this).parent().remove();
+	 });
+});
+		</script>
+		
+		
+		
+			<div id="strip" style="height:auto; background-color:white;">
+			
+					<div id="title_back" style="background-image:url('images/post_back5.jpg')">
+						<div id="your_new_text" align="center">YOUR NEW</div>
+						<div id="post_is_text" align="center">POST IS</div>
+						<div id="under_text" align="center">UNDER</div>
+						<div id="construction_text" align="center">CONSTRUCTION</div>
+						
+						
+						<div id="your_text" align="center">YOUR</div>
+						<div id="new_text" align="center">NEW</div>
+						<div id="post_text" align="center">POST</div>
+						<div id="is_text" align="center">IS</div>
+						<div id="being_text" align="center">BEING</div>
+						<div id="created_text" align="center">CREATED</div>
+					</div>
+					
+					
+				
+				<script>
+						function readURL(event){
+				 var getImagePath = URL.createObjectURL(event.target.files[0]);
+				 $('#content_picture').css('background-image', 'url(' + getImagePath + ')');
+				 //$("settings")+number+("img").attr('src', getImagePath);
+				 
+				}
+			</script>
+				
+				<div id="content_panel">
+					<div id="enter_title_text">
+						Which part of your experience would you like to share ?
+					</div>
+					<input type="text" name="article_title" placeholder="Enter the title here" id="article_title_box">
+					
+					<div id="choose_category">
+						Your experience falls under which category ?
+					</div>
+					<select id="my_select">
+						<option value="1">Entertainment</option>
+						<option value="2">Techie World</option>
+						<option value="3">Sports</option>
+						<option value="4">Places</option>
+						<option value="5">Health % Fitness</option>
+						<option value="6">Incredible Dose </option>
+					</select>
+					
+					<form action="#" id="panel1">
+						<div id="new_panel"><i class="fa fa-anchor"></i>New Panel</div>
+						<input type="text" name="subheading" placeholder="Sub-Heading" id="subheading_text">
+						<div id="content_picture" ></div>
+						<!--<img id="content_picture" src="#" />-->
+						<input type='file' name="background-image" onchange="readURL(event)" />
+						<textarea rows="5" name="panel" placeholder="Type your content here!" id="panel_content"></textarea>
+					</form>
+					<div id="this_div_contains_settings"></div>
+					<a href="#" class="design_button add" id="add_more"><i class="fa fa-plus-square"></i>Click to add a new panel</a>
+				</div>
+			</div>
+		
+			<div id="footer" style="margin-top:35px;">
+				<div id="copyright"> Copyright <i class="fa fa-copyright"></i> 2015. All Rights Reserved | Designed and Developed by <i class="fa fa-desktop"></i></div>
+				
+				<ul id="privacy">
+					<li><a href="#">About</a></li>
+					<li><a href="Team.php">Team</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="#" id="not_in_mob">Terms and Conditions</a></li>
+					<li><a href="#" id="not_in_mob">Privacy Policy</a></li>
+				</ul>
+			</div>
+		
+		</div>
+	</body>
+</html>	

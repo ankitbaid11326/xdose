@@ -1,0 +1,444 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/stylesheets/font-awesome4.css">
+		<link rel="stylesheet" href="/stylesheets/font-awesomeold3.css">
+		<link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+		<link href="/stylesheets/style.css" rel="stylesheet">
+		<link href="/stylesheets/Profile.css" rel="stylesheet">
+		<link href="/stylesheets/bootstrap.css" rel="stylesheet">
+		<link rel="stylesheet" href="/stylesheets/animate.css">
+		<script src="/javascripts/jquery.js"></script>
+		<script src="/javascripts/wow.min.js"></script>
+		<script src="/javascripts/load.js"></script>
+		<script src="/javascripts/popup.js"></script>
+		<script src="/javascripts/googleapi.js"></script>
+		
+		<script src="/javascripts/bootstrap.js"></script>
+		<script type="text/javascript">
+		
+			var date = document.getElementById('dateid');
+			console.log(date);
+		function myFunction() 
+		{	var date = document.getElementById('dateid');
+			var array = date.split(',');
+			for (i = 0 ; i<=4;i++){
+				window.alert(array[i]);
+				console.log(array[i]);
+			}
+		}
+
+		</script>
+		<script>
+		 // window.onload = myFunction;
+		new WOW().init();
+		</script>
+
+	</head>
+	<body onload="myFunction()">
+		<div id="load">
+			<i class="fa fa-spinner fa-pulse"></i>
+		</div>
+		
+		<div id="overlay"><div id="popup" style="background-image: url('/images/blurback.jpg');"><div id="maskpop">
+				<a href="javascript:myBlurFunction(0);" ><i class="fa fa-times-circle-o" style=" color:white; font-size:40px;" id="cancel"></i></a>
+					<div id="login_form_text">LOGIN FORM</div>
+						<form action="demo_form.asp" id="login_form">
+							<input type="text" name="fname" placeholder="Username" id="username"><br>
+							<input type="text" name="lname" placeholder="Password" id="password"><br>
+							<input type="checkbox" name="remember" value="" id="remember_check"> <div id="remember_text">Remember me ?</div>
+							<div id="forgot">Forgot Password!</div><br>
+							<input type="submit" value="Login" id="login_button"><br>
+							<div id="not_user">Not a user ?</div>
+							<div id="sign_now"><a href="javascript:myBlurFunction2(1);">Sign Up Now!</a></div>
+							</form>
+							<div id="hr"></div><div id="or"><div id="or_text">OR</div></div>
+							<div id="login_fb" style="background-image: url('/images/login_fb.png');"></div><div id="login_google" style="background-image: url('/images/login_google.png');"></div>
+			</div></div> </div> 
+			
+			<div id="overlay2"><div id="popup2" style="background-image: url('/images/blurback4.jpg');"><div id="maskpop2">
+				<a href="javascript:myBlurFunction2(0);" ><i class="fa fa-times-circle-o" style=" color:white; font-size:40px;" id="cancel2"></i></a>
+						<div id="signup_form_text">SIGNUP FORM</div>
+						
+						<form action="demo_form.asp" id="signup_form">
+						<input type="text" name="name" placeholder="Full Name" id="first_name"><br>
+						<input type="text" name="city" placeholder="City" id="last_name"><br>
+						<input type="text" name="job" placeholder="Job" id="job"><br>
+						<input type="email" name="email" placeholder="Email_ID" id="email_id"><br>
+						<input type="date" name="bday" placeholder="Click to choose a date" id="dob"><br>
+						<input type="password" name="psw" placeholder="New Password" id="new_pass"><br>
+						<input type="password" name="psw2" placeholder="Confirm Password" id="con_pass"><br>
+						<input type="radio" name="sex" value="male" id="male"><div id="male_text">Male</div>
+						<input type="radio" name="sex" value="female" id="female"><div id="female_text">Female</div><br>
+						<div id="agree">By signing up, you agree to the T&C. </div>
+						<a href="javascript:myBlurFunction4(1);" ><button type="button" id="signup_btn">SUBMIT</button></a><br>
+						</form>
+						
+						
+						<div id="welcome"><div id="wel_text">Welcome</div>
+											<div id="to_text">To</div>
+									   <div id="social_text">xDose</div></div>
+									   
+						<div id="features">
+							<div id="f1"><i class="fa fa-upload"></i> <div id="f1_text">Upload lorem ipsum lorem ipsum</div></div>
+							<div id="f2"><i class="fa fa-list-ul"></i> <div id="f2_text">Upload lorem ipsum lorem ipsum</div></div>
+							<div id="f3"><i class="fa fa-share-alt"></i> <div id="f3_text">Upload lorem ipsum lorem ipsum</div></div>
+						
+						</div>
+						
+			</div></div> </div>
+		
+		<div id="overlay5"><div id="popup5" style="background-image: url('/images/iphone1.jpg');"><div id="maskpop5">
+				<a href="javascript:myBlurFunction5(0);" ><i class="fa fa-times-circle-o" style=" color:white; font-size:40px;" id="cancel5"></i></a>
+				
+								<script>
+				function readURL(event){
+		 var getImagePath = URL.createObjectURL(event.target.files[0]);
+		 $('#upload_pic_circle').css('background-image', 'url(' + getImagePath + ')');
+		}
+			</script>
+				
+					<div id="upload_pic_circle"></div>
+					<!--<button type="button" id="upload_btn">Upload your Picture</button>-->
+					<input type='file' name="background-image" onchange="readURL(event)" />
+					<div id="time_to_share" align="center">Time to Share</div>
+					<textarea rows="5" name="about_user" placeholder="I am a techie guy who loves to hangout...bla bla..." id="description_user"></textarea>
+					<button type="button" id="save_btn">SAVE</button>	
+						
+			</div></div> </div>
+		
+		
+		<div id="whole">
+			<div id="header">
+				<div id="brand">
+					xDose
+				</div>
+				<ul id="login">
+  					<li><a href="/logout"><i class="fa fa-sign-in"></i>logout</a></li>	
+				</ul>	
+			</div>
+			
+			<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!--<a class="navbar-brand" href="#">Brand</a>-->
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li id="ment" align="center"><a href="#">Entertainment <span class="sr-only">(current)</span></a></li>
+        <li id="mtw" align="center"><a href="#">Techie World</a></li>
+		 <li id="mspo" align="center"><a href="#">Sports</a></li>
+		 <li id="mpla" align="center"><a href="#">Places</a></li>
+		 <li id="mhf" align="center"><a href="#">Health & Fitness</a></li>
+		 <li id="midose" align="center"><a href="#">Incredible Dose</a></li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+     
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+		
+			<div id="profile_box">
+
+				<div class="col-lg-5 col-md-5 col-sm-6 col-xs-12" style="padding:0 0 0 0;">
+					{#user}
+					{user.image}
+
+						<div id="profile_pic" style="background-image:url('/images/pp1.png');">	
+								<div id="pic_circle" style="background-image:url('{google.image}')"> 
+								</div>
+								<a href="javascript:myBlurFunction5(1);">
+									<div id="mask_edit">
+									
+										<div id="upload_profile_pic">
+											<i class="fa fa-upload"></i>Upload profile pic
+										</div>
+										<div id="edit_profile_pic">
+											<i class="fa fa-pencil-square"></i>
+										</div>
+									
+									</div>
+								</a>	
+						</div>
+						{/user}
+				</div>
+				<div class="col-lg-7 col-md-7 col-sm-6 col-xs-12" style="padding:0 0 0 0;">
+					<div id="profile_details">
+						<div id="profile_name">
+							{#user}
+								{facebook.name}
+								{google.name}
+								
+								<!-- {facebook.id} -->
+							
+						</div>
+						<ul style="list-style-type:none;" id="profile_list">
+							<input type="hidden" id="dateid" value="{user.dob}">
+							<li><i class='fa fa-graduation-cap' style="margin-right:10px;"></i> Student at Christ University</li>
+							<li><i class="fa fa-calendar" style='margin-right:17px;'></i> {#user} 
+							19 &nbsp;
+							{/user}
+							years of Life Experience!</li>
+							<li><i class="fa fa-map-marker" style='margin-right:24px;'></i> Lives in {.city}</li>
+							<li><i class="fa fa-quote-left" style='margin-right:17px;'></i> Life is too long, its just that we don't have that much time!</li>
+						</ul>
+						{/user}
+						<div id="extra_strip">
+							<div class="col-lg-3 col-md-7 col-sm-6 col-xs-6" style="padding:0px;">
+								<div id="article_box" align="center">
+									<ul id="acbc_list">
+										<li>60</li>
+										<li><i class="fa fa-file"></i></li>
+										<li>Articles</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-7 col-sm-6 col-xs-6" style="padding:0px;">
+								<div id="comment_box" align="center">
+									<ul id="acbc_list">
+										<li>25</li>
+										<li><i class="fa fa-comments"></i></li>
+										<li>Comments</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-7 col-sm-6 col-xs-6" style="padding:0px;">
+								<div id="best_blogger_box" align="center">
+									<ul id="acbc_list">
+										<li>4</li>
+										<li><i class="fa fa-star"></i></li>
+										<li>Best Blogger Won</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-7 col-sm-6 col-xs-6" style="padding:0px;">
+								<div id="challenge_box" align="center">
+									<ul id="acbc_list">
+										<li>7</li>
+										<li><i class="fa fa-trophy"></i></li>
+										<li>Challenges Won</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+						</div>
+					</div>
+				</div>
+				<!--<input type='file' />
+				<img id="myImg" src="#" alt="your image" />
+			<script>
+				$(function () {
+    $(":file").change(function () {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = imageIsLoaded;
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+
+function imageIsLoaded(e) {
+    $('#myImg').attr('src', e.target.result);
+};
+			</script>-->
+			
+			
+			<!--<input type='file' id='getval' name="background-image" onchange="readURL(event)" /><br/><br/>-->
+			<!--<script>
+				function readURL(event){
+		 var getImagePath = URL.createObjectURL(event.target.files[0]);
+		 $('#pic_circle').css('background-image', 'url(' + getImagePath + ')');
+		}
+			</script>-->
+			
+			
+		<button type="button" id="edit_profile_button">Edit Profile</button>
+		<a href="/addpost"><button type="button" id="new_post_button">I would like to share my experience</button></a>
+			
+		<ul id="serie1" style="list-style-type:none; "><!--margin-top:0px; padding:0; left:110px; width:83%;-->
+			<li><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div id="box1" >
+						<div class="abc"><a href="content2.php"><div id="inpic" style="background-image: url(/images/rambagh.jpg);"><div class="mask"></div></div>
+						<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>10+ Places In India That Are Perfect Destinations For Memorable Weddings</h3></div>
+						</a>
+						</div>
+						<div id="tra"> 
+							<div id="author">- By Times Of India</div>
+							<i class="fa fa-heart" id="buck"></i>
+						</div>
+			</div>
+				</div>
+				</li>
+			<li><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div id="box1" >
+						<div class="abc"><div id="inpic" style="background-image: url(/images/jadu.jpg);"><div class="mask"></div></div>
+						<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>The Moving Stories Of These 10 Cricketers Will Increase Your Love For The Sport</h3></div>
+						</div>
+						<div id="spo"> 
+							<div id="author">- By Times Of India</div>
+							<i class="fa fa-heart" id="buck"></i>
+						</div>
+			</div>
+				</div>
+				</li>	
+			
+			<li><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div id="box1" >
+						<div class="abc"><div id="inpic" style="background-image: url(/images/mark.jpg);"><div class="mask"></div></div>
+						<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>Mark Zuckerberg Is Donating A Whopping $45 Billion On Daughter's Birth</h3></div>
+						</div>
+						<div id="tw"> 
+							<div id="author">- By Times Of India</div>
+							<i class="fa fa-heart" id="buck"></i>
+						</div>
+			</div>
+				</div>
+				</li>
+			<li><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div id="box1" >
+						<div class="abc"><div id="inpic" style="background-image: url(/images/mark.jpg);"><div class="mask"></div></div>
+						<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>Mark Zuckerberg Is Donating A Whopping $45 Billion On Daughter's Birth</h3></div>
+						</div>
+						<div id="tw"> 
+							<div id="author">- By Times Of India</div>
+							<i class="fa fa-heart" id="buck"></i>
+						</div>
+			</div>
+				</div>
+				</li>	
+				
+			</ul>	
+			
+		<ul id="serie2" style="list-style-type:none; "><!--margin-top:0px; padding:0; left:110px; width:83%;-->
+			<li><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div id="box1" >
+						<div class="abc"><a href="content.php"><div id="inpic" style="background-image: url(/images/best_dressed.jpg);"><div class="mask"></div></div>
+						<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>These Were The Best Dressed Men At The 2016 Golden Globe Awards</h3></div>
+						</a>
+						</div>
+						<div id="ent"> 
+							<div id="author">- By Times Of India</div>
+							<i class="fa fa-heart" id="buck"></i>
+						</div>
+			</div>
+				</div>
+				</li>
+
+			<li>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<div id="box1" style="/* left:280px; */ bottom:0px; /* position:absolute; */">
+					<div class="abc"><div id="inpic" style="background-image: url(/images/haldiram.jpg);"><div class="mask"></div></div>
+					<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>You Thought Maggi Was Bad? USA Has Declared Haldiram’s ‘Unsuitable’ For Consumption</h3></div>
+					</div>
+					<div id="hf">
+						<div id="author">- By Hindustan Times</div>
+							<i class="fa fa-heart" id="buck"></i>
+					</div>
+			</div>
+				</div>
+				</li>
+			
+			
+			<li><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div id="box1" >
+						<div class="abc"><div id="inpic" style="background-image: url(/images/hrithik.jpg);"><div class="mask"></div></div>
+						<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>Hrithik Roshan Fulfilled A 15-Year-Old Cancer Patient’s Last Wish #Heart_Warming</h3></div>
+						</div>
+						<div id="ent"> 
+							<div id="author">- By Times Of India</div>
+							<i class="fa fa-heart" id="buck"></i>
+						</div>
+			</div>
+				</div>
+				</li>
+				
+			<li><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div id="box1" >
+						<div class="abc"><div id="inpic" style="background-image: url(/images/hrithik.jpg);"><div class="mask"></div></div>
+						<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>Hrithik Roshan Fulfilled A 15-Year-Old Cancer Patient’s Last Wish #Heart_Warming</h3></div>
+						</div>
+						<div id="ent"> 
+							<div id="author">- By Times Of India</div>
+							<i class="fa fa-heart" id="buck"></i>
+						</div>
+			</div>
+				</div>
+				</li>	
+		</ul>	
+		
+		<ul id="serie4" style="list-style-type:none; "><!--margin-top:0px; padding:0; left:110px; width:83%;-->
+			<li><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div id="box1" >
+						<div class="abc"><div id="inpic" style="background-image: url(/images/21000.jpg);"><div class="mask"></div></div>
+						<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>These 3 Super Moms Drove All The Way From Delhi To London</h3></div>
+						</div>
+						<div id="tra"> 
+							<div id="author">- By Times Of India</div>
+							<i class="fa fa-heart" id="buck"></i>
+						</div>
+			</div>
+				</div>
+				</li>
+
+			<li>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<div id="box1" style="/* left:280px; */ bottom:0px; /* position:absolute; */">
+					<div class="abc"><div id="inpic" style="background-image: url(/images/bmw.jpg);"><div class="mask"></div></div>
+					<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>BMW Working On A Fuel-Efficient Car With A Whopping Mileage Of 250 Kms/Litre</h3></div>
+					</div>
+					<div id="tw">
+						<div id="author">- By Hindustan Times</div>
+							<i class="fa fa-heart" id="buck"></i>
+					</div>
+			</div>
+				</div>
+				</li>
+			
+			<li><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div id="box1" >
+						<div class="abc"><div id="inpic" style="background-image: url(/images/banta.jpg);"><div class="mask"></div></div>
+						<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>10 Roadside Coolers That Will Help You Beat The Heat This Summer</h3></div>
+						</div>
+						<div id="hf"> 
+							<div id="author">- By Times Of India</div>
+							<i class="fa fa-heart" id="buck"></i>
+						</div>
+			</div>
+				</div>
+			</li>
+			
+			<li><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+					<div id="box1" >
+						<div class="abc"><div id="inpic" style="background-image: url(/images/banta.jpg);"><div class="mask"></div></div>
+						<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>10 Roadside Coolers That Will Help You Beat The Heat This Summer</h3></div>
+						</div>
+						<div id="hf"> 
+							<div id="author">- By Times Of India</div>
+							<i class="fa fa-heart" id="buck"></i>
+						</div>
+			</div>
+				</div>
+				</li>	
+		</ul>
+		
+		
+		</div>
+	</body>
+</html>

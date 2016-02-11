@@ -1,0 +1,173 @@
+<html>
+	<head>
+		<link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
+		<script src="/javascripts/jquery-1.12.0.min.js"></script>
+		 <script type="text/javascript">
+		    $(function() {
+		    	var value=1
+		        $('#addpanel').click(function(e) {
+		        	++value;
+		            e.preventDefault();
+		            if(value > 5){
+		            	value = 5;
+		            }
+		            if($('#postpanel #addpost').length < 5){
+                    // $('#postpanel').append('<div class="col-md-9" id="addid" ><div class="panel panel-info"><div class="panel-heading"><strong>Which part of your experience would you like to share ? </strong></div><div class="panel-body">Panel content</div></div></div>');
+                    $('#addpost'+value).css('display','block');
+                    
+                    console.log(value);
+                    }
+		        });
+		        $('#removepanel').click(function (e) {
+		        	e.preventDefault();
+		        	// --value;
+		        	if(value >= 5)
+		        	{
+		        		value = 5 ;
+		        		$('#addpost'+value).css('display','none');
+                    	value--;
+                    	console.log(value);
+		        	}
+		        	else if(value > 1){
+		        		$('#addpost'+value).css('display','none');
+                    	value--;
+                    	console.log(value);
+		        	}
+		    		
+
+		    
+		        });
+		    });
+		 </script>
+		 <style type="text/css">
+		 #addpost2,#addpost3,#addpost4,#addpost5{
+		 	display: none;
+		 }
+		 </style>
+	</head>
+	<body>
+		<div class="container">
+        <div class="row">
+		<div class="col-md-12">
+        <form action="/uploadpsot" method="post">
+        	<div class="row" id="category_title">
+				<div class="col-md-9" id="" >
+					<div class="panel panel-primary">
+	  					<div class="panel-heading"><strong>Which part of your experience would you like 	to share ? </strong>
+	  					</div>
+    					
+	  					<div class="panel-body">
+    						<div class="form-group">
+							  <label for="usr">Enter main Title:</label>
+							  <input type="text" name="maintitle" class="form-control" id="maintitle" placeholder="Enter main title">
+							</div>
+							<select id="my_select" name="my_select">
+								<option value="1">Entertainment</option>
+								<option value="2">Techie World</option>
+								<option value="3">Sports</option>
+								<option value="4">Places</option>
+								<option value="5">Health & Fitness</option>
+								<option value="6">Incredible Dose </option>
+							</select>
+  						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row" id="postpanel">
+				<div class="col-md-9" id="addpost1" >
+					<div class="panel panel-info">
+	  					<div class="panel-heading"><strong>Post Part 1 </strong>
+	  					</div>
+    					
+	  					<div class="panel-body">
+    						<div class="form-group">
+							  <label for="usr">Enter SubTitle 1</label>
+							  <input type="text" class="form-control" name="addpost1title" id="addpost1title" placeholder="Enter main title">
+							</div>
+							<input type='file' name="bgiamge1" onchange="readURL(event)" />
+							<textarea rows="5" name="addpost1desc" placeholder="Type your content here!" id="panel_content"></textarea>
+  						</div>
+					</div>
+				</div>
+
+				<div class="col-md-9" id="addpost2" >
+					<div class="panel panel-info">
+	  					<div class="panel-heading"><strong>Post Part 2 </strong>
+	  					</div>
+    					
+	  					<div class="panel-body">
+    						<div class="form-group">
+							  <label for="usr">Enter SubTitle 2</label>
+							  <input type="text" class="form-control" name="addpost2title" id="addpost1title" placeholder="Enter main title">
+							</div>
+							<input type='file' name="bgiamge2" onchange="readURL(event)" />
+							<textarea rows="5" name="addpost2desc" placeholder="Type your content here!" id="panel_content"></textarea>
+  						</div>
+					</div>
+				</div>
+
+				<div class="col-md-9" id="addpost3" >
+					<div class="panel panel-info">
+	  					<div class="panel-heading"><strong>Post Part 3 </strong>
+	  					</div>
+    					
+	  					<div class="panel-body">
+    						<div class="form-group">
+							  <label for="usr">Enter SubTitle 3</label>
+							  <input type="text" class="form-control" name="addpost3title" id="addpost1title" placeholder="Enter main title">
+							</div>
+							<input type='file' name="bgiamge3" onchange="readURL(event)" />
+							<textarea rows="5" name="addpost3desc" placeholder="Type your content here!" id="panel_content"></textarea>
+  						</div>
+					</div>
+				</div>
+
+				<div class="col-md-9" id="addpost4" >
+					<div class="panel panel-info">
+	  					<div class="panel-heading"><strong>Post Part 4 </strong>
+	  					</div>
+    					
+	  					<div class="panel-body">
+    						<div class="form-group">
+							  <label for="usr">Enter SubTitle 4</label>
+							  <input type="text" class="form-control" name="addpost4title" id="addpost1title" placeholder="Enter main title">
+							</div>
+							<input type='file' name="bgiamge4" onchange="readURL(event)" />
+							<textarea rows="5" name="addpost4desc" placeholder="Type your content here!" id="panel_content"></textarea>
+  						</div>
+					</div>
+				</div>
+
+				<div class="col-md-9" id="addpost5" >
+					<div class="panel panel-info">
+	  					<div class="panel-heading"><strong>Post Part 5 </strong>
+	  					</div>
+    					
+	  					<div class="panel-body">
+    						<div class="form-group">
+							  <label for="usr">Enter SubTitle 5</label>
+							  <input type="text" class="form-control" name="addpost5title" id="addpost1title" placeholder="Enter main title">
+							</div>
+							<input type='file' name="bgiamge5" onchange="readURL(event)" />
+							<textarea rows="5" name="addpost5desc" placeholder="Type your content here!" id="panel_content"></textarea>
+  						</div>
+					</div>
+				</div>
+			
+
+
+			</div>
+			<input type="submit" value="upload post" />
+		</form>
+        </div>
+        </div>
+        <div class="container">
+        <div class="row">
+        <div class="col-md-6 well">
+        <input type="button" value="-" class="btn btn-danger " id="removepanel">
+        <input type="button" value="+" class="btn btn-info " id="addpanel">
+        </div>
+        </div></div>
+		</div>
+	</body>
+</html>

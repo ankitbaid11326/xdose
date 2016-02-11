@@ -1,0 +1,180 @@
+#panel1{
+	margin:60px 0 0 0;
+}
+#content_panel{
+	position: relative;
+    left: 5%;
+    width: 50%;
+    height: auto;
+    margin: 30px 0 0 0;
+}
+#subheading_text{
+	position: relative;
+    width: 100%;
+    height: 60px;
+	color:white;
+    padding: 7px 10px;
+    border: none;
+    outline: 0;
+   background: #26a59a;
+    margin: 15px 0 0 0;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+#panel_content{
+	position: relative;
+    width: 100%;
+	resize: none;
+    height: 100px;
+    padding: 7px 10px;
+    border: none;
+	color:white;
+    outline: 0;
+    background: #26a59a;
+    margin: 15px 0 0 0;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+#add_more{
+	position: relative;
+    top: 30px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size:25px;
+}
+#add_more i{
+	margin:0px 10px 0 0;
+}
+#add_more:hover{
+	cursor:pointer;
+	transition: .35s ease-out all;
+  -webkit-transition: .35s ease-out all;
+}
+	
+#add_more:link    {color:#333; text-decoration:none;}
+#add_more:visited {color:#333; text-decoration:none;}
+#add_more:active  {color:#333; text-decoration:none;}
+
+.design_button{
+	position: relative;
+	top: 5px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size:20px;
+}
+.design_button i{
+	margin:0px 10px 0 0;
+}
+.design_button:hover{
+	cursor:pointer;
+	transition: .35s ease-out all;
+  -webkit-transition: .35s ease-out all;
+}
+	
+.design_button:link    {color:#333; text-decoration:none;}
+.design_button:visited {color:#333; text-decoration:none;}
+.design_button:active  {color:#333; text-decoration:none;}
+
+#title_back{
+	position: relative;
+    width: 100%;
+    height: 420px;
+    background-size: 90% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#your_new_text,#post_is_text,#under_text,#construction_text{
+	position: relative;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 33px;
+    top: 45%;
+    color: white;
+    font-weight: 800;
+}
+#your_text,#new_text,#post_text,#is_text,#being_text,#created_text{
+	display:none;
+}
+#enter_title_text{
+	position:relative;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size:50px;
+}
+#choose_category{
+	position:relative;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size:25px;
+	margin: 45px 0 0 0;
+}
+#my_select{
+	position:relative;
+	font-size:30px;
+	background: #26a59a;
+	color:white;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	width:50%;
+	height:90px;
+	margin:15px 0 0 0;
+	padding:0 0 0 50px;
+}
+#my_select option{
+	background:white;
+	color:black;
+}
+#article_title_box{
+	position: relative;
+    width: 100%;
+    height: 60px;
+    padding: 7px 10px;
+    border: none;
+    outline: 0;
+	color:white;
+	color:white;
+    background: #26a59a;
+    margin: 15px 0 0 0;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+#article_title_box::-webkit-input-placeholder,#subheading_text::-webkit-input-placeholder,#panel_content::-webkit-input-placeholder{
+	color:white;
+}
+#new_panel{
+	position:relative;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size:25px;
+}
+#new_panel i{
+	margin:0 10px 0 0;
+}
+#content_picture{
+	position:relative;
+	//max-height:95%;
+	//max-width:95%;
+	height: 300px;
+    width: 50%;
+	background-position:center;
+	background-size:90% 90%;
+	background-repeat:no-repeat;
+	
+}
+@media (max-width: 480px){
+#title_back{
+    background-size: 100% 100%;
+}
+#your_new_text,#post_is_text,#under_text,#construction_text{
+	display:none;
+}
+#your_text,#new_text,#post_text,#is_text,#being_text,#created_text{
+	display:block;
+	position: relative;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    top: 45%;
+    color: white;
+    font-weight: 800;
+	font-size:20px;
+}
+#content_panel{
+	width: 90%;
+    height: auto;
+}
+#enter_title_text{
+	font-size:35px;
+}
+#my_select{
+	width:85%;
+}
+}

@@ -1,0 +1,17 @@
+#slidingDiv, #slidingDiv_2{
+	height:300px;
+	background-color: #99CCFF;
+	padding:20px;
+	margin-top:10px;
+	border-bottom:5px solid #3399FF;
+	display:none;
+}
+.toggle{
+ display:inline-block;
+height:48px;
+width:48px;  
+//background:url("http://icons.iconarchive.com/icons/pixelmixer/basic/48/plus-icon.png");
+}
+.toggle.expanded{
+  //background:url("http://cdn2.iconfinder.com/data/icons/onebit/PNG/onebit_32.png");
+}

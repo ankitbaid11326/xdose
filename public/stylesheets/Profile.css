@@ -1,0 +1,357 @@
+#profile_box{
+	width: auto;
+    height: 440px;
+    margin-left: 120px;
+    margin-right: 90px;
+	//background-color:black;
+}
+#profile_pic{
+	//background-color:yellow;
+	height:100%;
+	width: 100%;
+    position: relative;
+    left: 0px;
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+	//border-radius:3%;
+}
+#profile_details{
+	background-color:#f9bf3b;
+	height:100%;
+	width: 100%;
+    position: relative;
+    left: 3px;
+	//border-radius:3%;
+}
+#pic_circle{
+	width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    position: relative;
+    top: 20px;
+    left: 27%;
+    border: 4px solid white;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#profile_name{
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:50px;
+	color:white;
+	position: relative;
+    top: 15px;
+    left: 70px;
+}
+#profile_list{
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	font-size:23px;
+	color:white;
+	position: relative;
+    top: 15px;
+    left: 0px;
+	width:75%;
+}
+#profile_list li{
+	margin-top:10px;
+}
+#profile_list i{
+	color:#c0392b;
+}
+#extra_strip{
+	width: 100%;
+    height: 125px;
+    bottom: 0px;
+    position: absolute;
+    background-color: black;
+}
+#article_box{
+	background-color:#b56969;
+}
+#comment_box{
+	background-color:#22264b;
+}
+#best_blogger_box{
+	background-color:#b0aac2;
+}
+#challenge_box{
+	background-color:#26c281;
+}
+#article_box,#comment_box,#best_blogger_box,#challenge_box{
+	width:100%;
+	height:100%;
+	border-top: 2px solid white;
+    border-right: 2px solid white;
+}
+#acbc_list{
+	list-style-type: none;
+    color: white;
+    font-size: 18px;
+    top: 5px;
+    left: -20px;
+    position: relative;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+#acbc_list i{
+	font-size:40px;
+}
+#acbc_list li{
+	margin-bottom:2px;
+}
+
+.blur5 {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+}
+#overlay5    {
+    position: fixed;
+    display: none;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(0,0,0,.4);
+    z-index: 999;
+}
+#popup5{
+    position: fixed;
+    width: 500px;
+    height: 590px;
+    background-size: 100% 100%;
+    border-radius: 40px;
+    box-shadow: 10px 10px 15px #000;
+    left: 425px;
+    top: 25px;
+  
+}
+#maskpop5{
+	position: fixed;
+    width: 500px;
+    height: 590px;
+    left: 425px;
+    top: 25px;
+    border-radius: 40px;
+    background: rgba(0,0,0,0.3);
+}
+#cancel5{
+	position:absolute;
+	right:0px;
+}
+#upload_btn{
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+	width: 250px;
+	height: 35px;
+	background-color:#fdd017;
+	outline: 0;
+	  border: 0;
+	color:white;
+	font-size:20px;
+	border-radius:2px;
+	font-weight:700;
+	position: relative;
+    left: 120px;
+    top: 50px;
+}
+#time_to_share{
+	font-size:30px;
+	color:white;
+	position:relative;
+	top:70px;
+	font-family:"Trebuchet MS", Helvetica, sans-serif;
+}
+#upload_pic_circle{
+	position:relative;
+	top:30px;
+	left:150px;
+	width:200px;
+	height:200px;
+	border-radius:100px;
+	background-color:white;
+	 background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#description_user{
+	width: 400px;
+    height: 140px;
+    resize: none;
+    padding: 7px 10px;
+    outline: 0;
+    border: none;
+    border-radius: 2px;
+    background: #fcfcfc;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    position: relative;
+    left: 50px;
+    top: 90px;
+}
+#save_btn{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+    width: 200px;
+    height: 35px;
+    background-color: #fdd017;
+    outline: 0;
+    border: 0;
+    color: white;
+    font-size: 20px;
+    border-radius: 2px;
+    font-weight: 700;
+    position: relative;
+    left: 150px;
+    top: 110px;
+}
+
+#mask_edit{
+	    width: 100%;
+    height: 5px;
+	    position: absolute;
+    bottom: 0;
+}
+#profile_pic:hover #mask_edit{
+	bottom: 0;
+    position: absolute;
+    background-color: rgba(0,0,0,.4);
+    height: 15%;
+    width: 100%;
+    cursor: pointer;
+    transition: .35s ease-out all;
+    -webkit-transition: .35s ease-out all;
+ 
+}
+#upload_profile_pic{
+	
+	opacity:1;
+	color: white;
+    font-size: 20px;
+	font-weight: 700;
+    position: relative;
+    left: 33%;
+    top: 20px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+#edit_profile_pic{
+	color: white;
+    font-size: 50px;
+	font-weight: 700;
+    float:right;
+	position:relative;
+    top: -70px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+#profile_pic:hover #upload_profile_pic{
+	opacity:100;
+	cursor:pointer;
+	transition: .35s ease-out all;
+  -webkit-transition: .35s ease-out all;
+}
+#profile_pic:hover #edit_profile_pic{
+	opacity:0;
+	cursor:pointer;
+	transition: .35s ease-out all;
+  -webkit-transition: .35s ease-out all;
+}
+	
+#profile_pic a:link    {color:white; text-decoration:none;}
+#profile_pic a:visited {color:white; text-decoration:none;}
+#profile_pic a:active  {color:white; text-decoration:none;}
+#upload_profile_pic i{
+	margin:0 10px 0 0;
+}
+
+#edit_profile_button{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+    width: 35%;
+    height: 40px;
+    background-color: #f27935;
+    outline: 0;
+    border: 0;
+    color: white;
+    font-size: 20px;
+    border-radius: 2px;
+    font-weight: 700;
+    position: relative;
+    left: 122px;
+    top: 10px;
+}
+#new_post_button{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+    width: 49%;
+    height: 40px;
+    background-color: #f9bf3b;
+    outline: 0;
+    border: 0;
+    color: white;
+    font-size: 20px;
+    border-radius: 2px;
+    font-weight: 700;
+    position: relative;
+	left:122px;
+	top:10px;
+}
+#serie1,#serie2,#serie3,#serie4{
+	margin-top: 0px;
+    padding: 0;
+    left: 110px;
+    width: 83%;
+}
+
+@media (max-width: 480px){
+
+#profile_box{
+    margin-left: 0px;
+    margin-right: 0px;
+	width:100%;
+	}
+#profile_pic{
+	width:100%;
+}
+#profile_details{
+	height:100%;
+	left:0px;
+}	
+#profile_name{
+	font-size:40px;
+}
+#profile_list{
+	font-size:20px;
+	left:-10px;
+	width:100%;
+}
+#profile_list li{
+	margin-top:15px;
+}
+#pic_circle{
+	left:20%;
+}
+#upload_profile_pic{
+	left:25%;
+}
+#mask_edit{
+	height:15%;
+	background-color: rgba(0,0,0,.4);
+}
+#edit_profile_pic{
+	top:-20px;
+	opacity:0;
+}
+#serie1{
+	margin-top:140px;
+}
+#serie1,#serie2,#serie3,#serie4{
+	left: 0%;
+    width: 100%
+}
+#edit_profile_button{
+	left: 0px;
+	width:100%;
+    top: 127px;
+	height:70px;
+}
+#new_post_button{
+	left: 0px;
+	width:100%;
+    top: 129px;
+	height:70px;
+}
+}
