@@ -13,9 +13,12 @@ var passport = require('passport');
 var flash    = require('connect-flash');
 var expressValidator = require('express-validator');
 var morgan       = require('morgan');
+// var multer = require('multer');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
+var multipart = require('connect-multiparty');
+var db = require('monk')('localhost/xdose');
 
 var configDB = require('./config/database.js');
 
@@ -33,7 +36,10 @@ app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// To handle uploads 
+// app.use(multer({dest:'./public/uploads/'}).single('mainimage'));
 
 // set up our express application
 app.use(morgan('dev')); // log every request to the console
@@ -43,7 +49,14 @@ app.use(bodyParser()); // get information from html forms
 app.set('view engine', 'html'); // set up ejs for templating
 
 // required for passport
-app.use(session({ secret: 'iloveit' })); // session secret
+app.use(session({
+	// secret: 'iloveit'
+	secret: "hidden",
+    key: 'asdasdasd', 
+    cookie: { maxAge: 60000, secure: false },
+    resave: true,
+    saveUninitialized: false
+})); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session

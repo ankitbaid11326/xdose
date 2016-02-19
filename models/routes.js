@@ -1,5 +1,24 @@
 // app/routes.js
 module.exports = function(app, passport) {
+    var db = require('monk')('localhost/xdose');
+    var multer = require('multer');
+    var upload = multer({dest:'public/images/uploads/'}); 
+
+    // var multipart = require('connect-multiparty');
+    // var multipartMiddleware = multipart();
+
+
+    // used to serialize the user for the session
+    passport.serializeUser(function(user, done) {
+        done(null, user.id);
+    });
+
+    // used to deserialize the user
+    passport.deserializeUser(function(id, done) {
+        User.findOne({_id:id}, function (err, user) {
+            done(err, user._id);
+  });
+});
 
     // =====================================
     // HOME PAGE (with login links) ========
@@ -70,12 +89,13 @@ module.exports = function(app, passport) {
         });
     });
 
+
     // =====================================
     // PROFILE SECTION =====================
     // =====================================
     // we will want this protected so you have to be logged in to visit
     // we will use route middleware to verify this (the isLoggedIn function)
-    app.get('/upload',function(req, res) {
+    app.get('/upload',isLoggedIn, function(req, res) {
         res.render('upload.html', {
             user : req.user // get the user out of session and pass to template
         });
@@ -174,6 +194,68 @@ module.exports = function(app, passport) {
                 failureRedirect : '/'
             }));
 
+    // to get images from user posts
+
+        var cpUpload = upload.fields([{ name :'bgimage1',maxCount:1},{ name :'bgimage2',maxCount:1},{ name :'bgimage3',maxCount:1},{ name :'bgimage4',maxCount:1},{ name :'bgimage5',maxCount:1},]);
+
+        app.post('/upload',cpUpload, function(req, res){
+            // console.log(req.user);
+            var title       = req.body.maintitle;
+            var category    = req.body.my_select;
+            var google_name      = req.user.google.email;
+            var facebook_name      = req.user.facebook.email;
+
+            console.log(google_name);
+            console.log(facebook_name);
+
+            if(google_name != undefined && facebook_name == undefined)
+                name = google_name;
+            else if(google_name == undefined && facebook_name != undefined)
+                name =facebook_name;
+            else name = "undefined";
+            var arr = [];
+
+            // console.log(req.files);
+
+            var json = {};
+            for(var i=0,j=2; i<5; i++,j=j+2){
+                var file = req.files[Object.keys(req.files)[i]];
+                var subtitle = req.body[Object.keys(req.body)[j]];
+                var content = req.body[Object.keys(req.body)[j+1]];
+                
+                    var temp_obj = {};
+                        temp_obj['subtitle'+i] = subtitle;
+                        temp_obj['content'+i] = content;
+                        temp_obj['file'+i] = JSON.stringify(file);
+                        arr.push(temp_obj);
+            }                
+                
+            removeNulls(arr);
+            console.log(arr);
+
+            var posts = db.get('posts');
+            // console.log(datauser);
+            // SUBMIT TO DB
+                    posts.insert({
+                        // "user":req.user.google.email,
+                        "user":name,
+                        "title":title,
+                        "arr":JSON.stringify(arr),
+                        "category":category
+                    }, function(err, post){
+                        if(err){
+                            console.log(err);
+                            res.send('There is an issue submiting the post');
+                        } else {
+                            console.log("success");
+                            req.flash('Success','Post submitted');
+                            res.location('/profile');
+                            res.redirect('/profile');
+                        }
+                    });
+            // res.end(JSON.stringify(req.files)+ "\n");
+        });
+
 
 };
 
@@ -186,4 +268,13 @@ function isLoggedIn(req, res, next) {
 
     // if they aren't redirect them to the home page
     res.redirect('/');
+}
+
+// Function to remove empty object from insert object to Database
+function removeNulls(obj){
+  var isArray = obj instanceof Array;
+  for (var k in obj){
+    if (obj[k]=== undefined  || obj[k] === "") isArray ? obj.splice(k,1) : delete obj[k];
+    else if (typeof obj[k]=="object") removeNulls(obj[k]);
+  }
 }
