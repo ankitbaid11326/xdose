@@ -1,3 +1,6 @@
+body{
+	overflow-x:visible;
+}
 #title_text{
 	//height:100px;
 	width:60%;

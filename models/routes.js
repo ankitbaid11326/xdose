@@ -17,15 +17,35 @@ module.exports = function(app, passport) {
     passport.deserializeUser(function(id, done) {
         User.findOne({_id:id}, function (err, user) {
             done(err, user._id);
-  });
-});
+      });
+    });
 
     // =====================================
     // HOME PAGE (with login links) ========
     // =====================================
     app.get('/', function(req, res) {
-        res.render('home'); // load the index.ejs file
+        var posts = db.get('posts');
+        posts.find({},{},function(err, posts){
+            res.render('home',{
+                "posts":posts
+            });
+        });
     });
+
+
+    // =====================================
+    // Testing page (with Index ) ========
+    // =====================================
+    app.get('/index', function(req, res) {
+        var posts = db.get('posts');
+        posts.find({},{},function(err, posts){
+            console.log(posts);
+            res.render('index',{
+                "posts":posts
+            });
+        });
+    });
+
 
     // =====================================
     // LOGIN ===============================
@@ -95,6 +115,7 @@ module.exports = function(app, passport) {
     // =====================================
     // we will want this protected so you have to be logged in to visit
     // we will use route middleware to verify this (the isLoggedIn function)
+    // app.get('/upload', function(req, res) {
     app.get('/upload',isLoggedIn, function(req, res) {
         res.render('upload.html', {
             user : req.user // get the user out of session and pass to template
@@ -199,34 +220,29 @@ module.exports = function(app, passport) {
         var cpUpload = upload.fields([{ name :'bgimage1',maxCount:1},{ name :'bgimage2',maxCount:1},{ name :'bgimage3',maxCount:1},{ name :'bgimage4',maxCount:1},{ name :'bgimage5',maxCount:1},]);
 
         app.post('/upload',cpUpload, function(req, res){
-            // console.log(req.user);
+            console.log(req.user);
             var title       = req.body.maintitle;
             var category    = req.body.my_select;
+            var cover  = req.files[Object.keys(req.files)[0]];
             var google_name      = req.user.google.email;
             var facebook_name      = req.user.facebook.email;
-
-            console.log(google_name);
-            console.log(facebook_name);
 
             if(google_name != undefined && facebook_name == undefined)
                 name = google_name;
             else if(google_name == undefined && facebook_name != undefined)
                 name =facebook_name;
-            else name = "undefined";
+            else name = "something";
             var arr = [];
-
-            // console.log(req.files);
 
             var json = {};
             for(var i=0,j=2; i<5; i++,j=j+2){
                 var file = req.files[Object.keys(req.files)[i]];
                 var subtitle = req.body[Object.keys(req.body)[j]];
                 var content = req.body[Object.keys(req.body)[j+1]];
-                
                     var temp_obj = {};
-                        temp_obj['subtitle'+i] = subtitle;
-                        temp_obj['content'+i] = content;
-                        temp_obj['file'+i] = JSON.stringify(file);
+                        temp_obj['subtitle'] = subtitle;
+                        temp_obj['content'] = content;
+                        temp_obj['file'] = file;
                         arr.push(temp_obj);
             }                
                 
@@ -237,11 +253,11 @@ module.exports = function(app, passport) {
             // console.log(datauser);
             // SUBMIT TO DB
                     posts.insert({
-                        // "user":req.user.google.email,
                         "user":name,
                         "title":title,
-                        "arr":JSON.stringify(arr),
-                        "category":category
+                        "cover":cover,
+                        "category":category,
+                        "arr":arr
                     }, function(err, post){
                         if(err){
                             console.log(err);
@@ -255,7 +271,28 @@ module.exports = function(app, passport) {
                     });
             // res.end(JSON.stringify(req.files)+ "\n");
         });
+    
 
+    // SHOW POSTS based on user homepage
+    app.get('/:id([0-9a-f]{24})',function(req, res, next){
+    var posts = db.get('posts');
+    posts.findById(req.params.id,function(err, post){
+            res.render('content2',{
+            "post": post
+            });
+        });
+    });
+
+    // Show posts based on category
+    app.get('/:category', function(req, res, next){
+    var posts = db.get('posts');
+    posts.find({category: req.params.category}, {}, function(err, posts){
+        res.render('content',{
+            "title":req.params.category,
+            "posts":posts
+        });
+    });
+}) 
 
 };
 

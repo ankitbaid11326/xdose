@@ -23,6 +23,48 @@
 	<!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
 	<link rel="stylesheet" type="text/css" href="engine0/style.css" />
 	<!--script type="text/javascript" src="engine0/jquery.js"></script-->
+		<style>
+		body {
+  background: #e1e1e1;
+}
+
+.card {
+  height: auto;
+  padding: 0px;
+  background: #FFF;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+  animation: ease-in-out;
+}
+.card:hover {f
+  box-shadow: 0px 1px 5px 5px rgba(0, 0, 0, 0.12);
+  transform: scale(1.05);
+  border: #ccc 1px solid;
+}
+.textcutter{
+	text-overflow: ellipsis;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+}
+.card > div {
+  padding: 10px;
+}
+.card > div h2 {
+  font-size: 20px;
+  margin: 0px;
+  padding: 0px;
+}
+.card > div span {
+  color: #bbb;
+  padding-top: 20px;
+}
+.card > div .by {
+  color: #333;
+}
+		</style>
 	<!-- End WOWSlider.com HEAD section --></head>
 	<body>
 		
@@ -112,19 +154,14 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li id="ment" align="center"><a href="#">Entertainment <span class="sr-only">(current)</span></a></li>
-        <li id="mtw" align="center"><a href="#">Techie World</a></li>
-		 <li id="mspo" align="center"><a href="#">Sports</a></li>
-		 <li id="mpla" align="center"><a href="#">Places</a></li>
-		 <li id="mhf" align="center"><a href="#">Health & Fitness</a></li>
-		 <li id="midose" align="center"><a href="#">Incredible Dose</a></li>
+        <li id="ment" align="center"><a href="/Entertainment">Entertainment <span class="sr-only">(current)</span></a></li>
+       <li id="mtw" align="center"><a href="/TechieWorld">Techie World</a></li>
+		 <li id="mspo" align="center"><a href="/Sports">Sports</a></li>
+		 <li id="mpla" align="center"><a href="/Places">Places</a></li>
+		 <li id="mhf" align="center"><a href="/Health&Fitness">Health & Fitness</a></li>
+		 <li id="midose" align="center"><a href="/IncredibleDose">Incredible Dose</a></li>
+		 <li id="mcr" align="center"><a href="#">Challenge Room</a></li>
       </ul>
-      <form class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
      
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -221,284 +258,35 @@
 		</div>
 		
 			<ul id="serie1" style="list-style-type:none; margin-top:0px; padding:0;">
-			<li><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div id="box1" >
-						<div class="abc"><a href="content2.php"><div id="inpic" style="background-image: url(images/rambagh.jpg);"><div class="mask"></div></div>
-						<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>10+ Places In India That Are Perfect Destinations For Memorable Weddings</h3></div>
-						</a>
-						</div>
-						<div id="tra"> 
-							<div id="author">- By Times Of India</div>
-							<i class="fa fa-heart" id="buck"></i>
-						</div>
-			</div>
-				</div>
-				</li>
-			<li><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div id="box1" >
-						<div class="abc"><div id="inpic" style="background-image: url(images/jadu.jpg);"><div class="mask"></div></div>
-						<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>The Moving Stories Of These 10 Cricketers Will Increase Your Love For The Sport</h3></div>
-						</div>
-						<div id="spo"> 
-							<div id="author">- By Times Of India</div>
-							<i class="fa fa-heart" id="buck"></i>
-						</div>
-			</div>
-				</div>
-				</li>	
-			
-			<li><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div id="box1" >
-						<div class="abc"><div id="inpic" style="background-image: url(images/mark.jpg);"><div class="mask"></div></div>
-						<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>Mark Zuckerberg Is Donating A Whopping $45 Billion On Daughter's Birth</h3></div>
-						</div>
-						<div id="tw"> 
-							<div id="author">- By Times Of India</div>
-							<i class="fa fa-heart" id="buck"></i>
-						</div>
-			</div>
-				</div>
-				</li>
-			
-			<li><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-			
-		<div id="big1">
-			<div id="bh">
-				<div id="des">TRENDING</div>
-			</div>
-			<div id="for_scroll">
-			<div id="bb1">
-				<div class="abc3"><div id="smpic1"  style="background-image: url('images/chai.jpg');" ><div class="mask3"></div></div><div id="des1">11 Tea Accessories That Every Chai Lover Would Want To Own</div></div>
-			</div>
-			<div id="bb2">
-				<div class="abc3"><div id="smpic1" style="background-image: url('images/modi.jpg');"><div class="mask3"></div></div><div id="des2">Complaint Registered Against PM Modi On Charges Of Insulting National Flag</div></div>
-			</div>
-			<div id="bb3">
-				<div class="abc3"><div id="smpic1" style="background-image: url('images/bus.jpg');"><div class="mask3"></div></div><div id="des3">Bus Rides In Delhi To Be Safer, 1000 Home Guards Deployed On DTC Buses</div></div>
-			</div>
-			<div id="bb4">
-				<div class="abc3"><div id="smpic1" style="background-image: url('images/james.jpg');"><div class="mask3"></div></div><div id="des4">James Horner, Composer Of Titanic And Braveheart, Dies In Plane Crash</div></div>
-			</div>
-			<div id="bb5">
-				<div class="abc3"><div id="smpic1" style="background-image: url('images/james.jpg');"><div class="mask3"></div></div><div id="des4">James Horner, Composer Of Titanic And Braveheart, Dies In Plane Crash</div></div>
-			</div>
-			<div id="bb6">
-				<div class="abc3"><div id="smpic1" style="background-image: url('images/james.jpg');"><div class="mask3"></div></div><div id="des4">James Horner, Composer Of Titanic And Braveheart, Dies In Plane Crash</div></div>
-			</div>
-		</div>
-		</div>
-		</div>	
-		</li>
-		</ul>
+				<div class="container">
+	<div class="row">
+	{#posts}
+	<a href="/{._id}">
+	<div class="col-md-3">
+	{#cover}
+	<div class="card">
+  		<img src="/images/uploads/{.filename}">
+  	<div>
+  	{/cover}
+  		<div class="textcutter">
+     		<h2>{.title}</h2>
+     	</div>
+  <span>Source &nbsp;</span>
+   <span class="by">
+     {.user}
+    </span>
+  </div>
+</div>
 		
-		<ul id="serie2" style="list-style-type:none; margin-top:0px; padding:0;">
-			<li><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div id="box1" >
-						<div class="abc"><a href="content.php"><div id="inpic" style="background-image: url(images/best_dressed.jpg);"><div class="mask"></div></div>
-						<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>These Were The Best Dressed Men At The 2016 Golden Globe Awards</h3></div>
-						</a>
-						</div>
-						<div id="ent"> 
-							<div id="author">- By Times Of India</div>
-							<i class="fa fa-heart" id="buck"></i>
-						</div>
-			</div>
-				</div>
-				</li>
+	</div>
+	</a>
+	{/posts}
+	</div>
+</div>
 
-			<li>
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-				<div id="box1" style="/* left:280px; */ bottom:0px; /* position:absolute; */">
-					<div class="abc"><div id="inpic" style="background-image: url(images/haldiram.jpg);"><div class="mask"></div></div>
-					<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>You Thought Maggi Was Bad? USA Has Declared Haldiram’s ‘Unsuitable’ For Consumption</h3></div>
-					</div>
-					<div id="hf">
-						<div id="author">- By Hindustan Times</div>
-							<i class="fa fa-heart" id="buck"></i>
-					</div>
-			</div>
-				</div>
-				</li>
-			
-			
-			<li><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div id="box1" >
-						<div class="abc"><div id="inpic" style="background-image: url(images/hrithik.jpg);"><div class="mask"></div></div>
-						<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>Hrithik Roshan Fulfilled A 15-Year-Old Cancer Patient’s Last Wish #Heart_Warming</h3></div>
-						</div>
-						<div id="ent"> 
-							<div id="author">- By Times Of India</div>
-							<i class="fa fa-heart" id="buck"></i>
-						</div>
-			</div>
-				</div>
-				</li>
-		</ul>
-		<ul id="serie3" style="list-style-type:none; margin-top:0px; padding:0;">
-			<li><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div id="box1" >
-						<div class="abc"><div id="inpic" style="background-image: url(images/chennai.jpg);"><div class="mask"></div></div>
-						<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>Thanks To A Few Flights & Trains Chennai Is Finally Limping Back On Track</h3></div>
-						</div>
-						<div id="tra"> 
-							<div id="author">- By Times Of India</div>
-							<i class="fa fa-heart" id="buck"></i>
-						</div>
-			</div>
-				</div>
-				</li>
-
-			<li>
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-				<div id="box1" style="/* left:280px; */ bottom:0px; /* position:absolute; */">
-					<div class="abc"><div id="inpic" style="background-image: url(images/pk.jpg);"><div class="mask"></div></div>
-					<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>PK celebrates Rs 100 Crores business in China</h3></div>
-					</div>
-					<div id="ent">
-						<div id="author">- By Hindustan Times</div>
-							<i class="fa fa-heart" id="buck"></i>
-					</div>
-			</div>
-				</div>
-				</li>
-			
-			
-			<li><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div id="box1" >
-						<div class="abc"><div id="inpic" style="background-image: url(images/google.jpg);"><div class="mask"></div></div>
-						<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>Google Wants Your Blood And It Just Filed A Patent For The Same</h3></div>
-						</div>
-						<div id="tw"> 
-							<div id="author">- By Times Of India</div>
-							<i class="fa fa-heart" id="buck"></i>
-						</div>
-			</div>
-				</div>
-				</li>
-		</ul>
-		<ul id="serie4" style="list-style-type:none; margin-top:0px; padding:0;">
-			<li><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div id="box1" >
-						<div class="abc"><div id="inpic" style="background-image: url(images/21000.jpg);"><div class="mask"></div></div>
-						<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>These 3 Super Moms Drove All The Way From Delhi To London</h3></div>
-						</div>
-						<div id="tra"> 
-							<div id="author">- By Times Of India</div>
-							<i class="fa fa-heart" id="buck"></i>
-						</div>
-			</div>
-				</div>
-				</li>
-
-			<li>
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-				<div id="box1" style="/* left:280px; */ bottom:0px; /* position:absolute; */">
-					<div class="abc"><div id="inpic" style="background-image: url(images/bmw.jpg);"><div class="mask"></div></div>
-					<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>BMW Working On A Fuel-Efficient Car With A Whopping Mileage Of 250 Kms/Litre</h3></div>
-					</div>
-					<div id="tw">
-						<div id="author">- By Hindustan Times</div>
-							<i class="fa fa-heart" id="buck"></i>
-					</div>
-			</div>
-				</div>
-				</li>
-			
-			<li><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div id="box1" >
-						<div class="abc"><div id="inpic" style="background-image: url(images/banta.jpg);"><div class="mask"></div></div>
-						<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>10 Roadside Coolers That Will Help You Beat The Heat This Summer</h3></div>
-						</div>
-						<div id="hf"> 
-							<div id="author">- By Times Of India</div>
-							<i class="fa fa-heart" id="buck"></i>
-						</div>
-			</div>
-				</div>
-				</li>
-		</ul>
-		<ul id="serie5" style="list-style-type:none; margin-top:0px; padding:0;">
-			<li><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div id="box1" >
-						<div class="abc"><div id="inpic" style="background-image: url(images/best.jpg);"><div class="mask"></div></div>
-						<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>Top 17 Countries With The Most Beautiful Women In The World</h3></div>
-						</div>
-						<div id="hf"> 
-							<div id="author">- By Times Of India</div>
-							<i class="fa fa-heart" id="buck"></i>
-						</div>
-			</div>
-				</div>
-				</li>
-
-			<li>
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-				<div id="box1" style="/* left:280px; */ bottom:0px; /* position:absolute; */">
-					<div class="abc"><div id="inpic" style="background-image: url(images/rahul.jpg);"><div class="mask"></div></div>
-					<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>Rahul Dravid To Coach India A & Under-19 Teams, Announces BCCI Advisory Committee</h3></div>
-					</div>
-					<div id="spo">
-						<div id="author">- By Hindustan Times</div>
-							<i class="fa fa-heart" id="buck"></i>
-					</div>
-			</div>
-				</div>
-				</li>
-			
-			<li><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div id="box1" >
-						<div class="abc"><div id="inpic" style="background-image: url(images/applecar.jpg);"><div class="mask"></div></div>
-						<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>Remember The Rumored Apple Car? Well, It Will Start Selling In 2019</h3></div>
-						</div>
-						<div id="tw"> 
-							<div id="author">- By Times Of India</div>
-							<i class="fa fa-heart" id="buck"></i>
-						</div>
-			</div>
-				</div>
-				</li>
-		</ul>
-		<ul id="serie6" style="list-style-type:none; margin-top:0px; padding:0;">
-			<li><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div id="box1" >
-						<div class="abc"><div id="inpic" style="background-image: url(images/diljit.jpg);"><div class="mask"></div></div>
-						<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>Sardaar Ji review: Diljit is a star, but where's the story?</h3></div>
-						</div>
-						<div id="ent"> 
-							<div id="author">- By Times Of India</div>
-							<i class="fa fa-heart" id="buck"></i>
-						</div>
-			</div>
-				</div>
-				</li>
-
-			<li>
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-				<div id="box1" style="/* left:280px; */ bottom:0px; /* position:absolute; */">
-					<div class="abc"><div id="inpic" style="background-image: url(images/amazon.jpg);"><div class="mask"></div></div>
-					<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>Amazon to take on Apple, Google with 'Alexa' voice assistant</h3></div>
-					</div>
-					<div id="tw">
-						<div id="author">- By Hindustan Times</div>
-							<i class="fa fa-heart" id="buck"></i>
-					</div>
-			</div>
-				</div>
-				</li>
-			
-			<li><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-					<div id="box1" >
-						<div class="abc"><div id="inpic" style="background-image: url(images/anand.jpg);"><div class="mask"></div></div>
-						<div id="hdline"> <i class="fa fa-hand-o-right" style="font-size:30px;"></i> <h3>Viswanathan Anand Wins It Again, Throws Open His House For The Flood Victims</h3></div>
-						</div>
-						<div id="spo"> 
-							<div id="author">- By Times Of India</div>
-							<i class="fa fa-heart" id="buck"></i>
-						</div>
-			</div>
-				</div>
-				</li>
-		</ul>
+			</ul>
+		
+		
 		
 		<div id="what_it_is" align="center" class="wow flipInX" data-wow-duration="1.5s" data-wow-delay="0.5s">It's All About<img src="images/beard1.png" style="width:100px; height:100px;"></div>
 		
