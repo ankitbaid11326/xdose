@@ -45,7 +45,7 @@
   padding: 10px;
 }
 .card > div h2 {
-  font-size: 20px;
+  font-size: 15px;
   margin: 0px;
   padding: 0px;
 }
@@ -62,8 +62,16 @@
 </head>
 <body>
 	<div class="container">
-	<div class="row">
+
 	{#posts}
+	<!-- <div class="row"> -->
+
+{@if ._id > 4}
+<p><div class="row"></p>
+{:else}
+<p></p>
+{/if}
+
 	<a href="/{._id}">
 	<div class="col-md-3">
 	{#cover}
@@ -72,7 +80,7 @@
   	<div>
   	{/cover}
 
-     <h2>truncateText(post.body,20){.title}</h2>
+     <h4>{.title}</h4>
   <span>Source</span>
    <span class="by">
      {.user}

@@ -1,0 +1,96 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="stylesheets/font-awesome4.css">
+		<link rel="stylesheet" href="stylesheets/font-awesomeold3.css">
+		<link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+		<link href="stylesheets/style.css" rel="stylesheet">
+		<link href="stylesheets/content.css" rel="stylesheet">
+		<link href="stylesheets/bootstrap.css" rel="stylesheet">
+		<link rel="stylesheet" href="stylesheets/animate.css">
+		<script src="javascripts/jquery.js"></script>
+		<script src="javascripts/wow.min.js"></script>
+		<script src="javascripts/load.js"></script>
+		<script src="javascripts/popup.js"></script>
+		<script src="javascripts/googleapi.js"></script>
+		<script src="javascripts/bootstrap.js"></script>
+	<title>{title}</title>
+	<script>
+		new WOW().init();
+		</script>
+	</head>
+	<body>
+		<div id="load">
+			<i class="fa fa-spinner fa-pulse"></i>
+		</div>
+		<div id="whole">
+			<div id="header">
+				<div id="brand">
+					xDose
+				</div>
+				<ul id="login">
+					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="javascript:myBlurFunction(1);"><i class="fa fa-sign-in"></i>Login</a></li>
+					<li><a href="javascript:myBlurFunction2(1);"><i class="fa fa-pencil-square-o"></i>Sign-Up</a></li>
+					<li><a href="#"><i class="fa fa-phone"></i>Contact-Us</a></li>
+				</ul>	
+			</div>
+			
+			<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!--<a class="navbar-brand" href="#">Brand</a>-->
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li id="ment" align="center"><a href="/Entertainment">Entertainment <span class="sr-only">(current)</span></a></li>
+        <li id="mtw" align="center"><a href="/TechieWorld">Techie World</a></li>
+		 <li id="mspo" align="center"><a href="/Sports">Sports</a></li>
+		 <li id="mpla" align="center"><a href="/Places">Places</a></li>
+		 <li id="mhf" align="center"><a href="/Health&Fitness">Health & Fitness</a></li>
+		 <li id="midose" align="center"><a href="IncredibleDose">Incredible Dose</a></li>
+      </ul>
+<body>
+
+<br><br>
+<hr>
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Active User on xDose</h3>
+  </div>
+  {#users}
+  <div class="panel-body">
+    
+    	{#google}
+    		<li>{.name}</li>
+    	{/google}
+    
+  </div>
+    {/users}
+</div>
+</div>
+<div class="col-md-6">
+		<form action="/sendmail" method="post">
+        <input type="submit" class="btn btn-danger btn-lg" value="Create Challenge to other users"/>
+        </form>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

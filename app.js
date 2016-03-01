@@ -8,6 +8,7 @@ var express = require('express')
   , app = express()
   , dust = require('dustjs-linkedin');
 var port     = process.env.PORT || 8000;
+var nodemailer = require('nodemailer');
 var mongoose = require('mongoose');
 var passport = require('passport');
 var flash    = require('connect-flash');

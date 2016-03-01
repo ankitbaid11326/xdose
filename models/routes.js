@@ -3,9 +3,47 @@ module.exports = function(app, passport) {
     var db = require('monk')('localhost/xdose');
     var multer = require('multer');
     var upload = multer({dest:'public/images/uploads/'}); 
+    var nodemailer = require('nodemailer');
 
-    // var multipart = require('connect-multiparty');
-    // var multipartMiddleware = multipart();
+    var smtpTransport = nodemailer.createTransport("SMTP",{
+    service: "Gmail",
+        auth: {
+            user: "christsam11326@gmail.com",
+            pass: "preamraj"
+        }   
+    });
+
+    app.post('/sendmail',function(req ,res){
+        console.log('started\n\n');
+        var transporter = nodemailer.createTransport({
+            service: "Gmail",
+            auth: {
+                user: "christsam11326@gmail.com",
+                pass: "preamraj"
+            }   
+        });
+        // console.log('transport layer is working\n\n');
+
+        var mailOptions = {
+            from: 'XDose Team'+req.user.google.name, // sender address
+            to: 'shreyast15@gmail.com, ashishw270@gmail.com, ankitbaid11326@gmail.com, saleema.js@christuniversity.in', // list of receivers
+            subject: 'xDose Testing', // Subject line
+            text: 'Dear User, You have been challenged by'+req.user.google.name+'.Please Visit the Challenge room to accept or deny the challenge. Please Do note that there is a specific time period...So HURRY..!!', // plaintext body
+        };
+        // console.log('mailoption is created\n\n');
+        // console.log(mailOptions);
+
+        // send mail with defined transport object
+        transporter.sendMail(mailOptions, function(error, info){
+            if(error){
+                return console.log(error);
+            }
+            console.log('Message sent: ' + info.response);
+        });
+        res.redirect('/profile');
+        res.render('/profile');
+
+    });
 
 
     // used to serialize the user for the session
@@ -32,6 +70,14 @@ module.exports = function(app, passport) {
         });
     });
 
+     app.get('/challenge', function(req, res) {
+        var users = db.get('users');
+        users.find({},{},function(err, users){
+            res.render('challenge',{
+                "users":users
+            });
+        });
+    });
 
     // =====================================
     // Testing page (with Index ) ========
@@ -116,7 +162,7 @@ module.exports = function(app, passport) {
     // we will want this protected so you have to be logged in to visit
     // we will use route middleware to verify this (the isLoggedIn function)
     // app.get('/upload', function(req, res) {
-    app.get('/upload',isLoggedIn, function(req, res) {
+    app.get('/upload', function(req, res) {
         res.render('upload.html', {
             user : req.user // get the user out of session and pass to template
         });
@@ -220,22 +266,28 @@ module.exports = function(app, passport) {
         var cpUpload = upload.fields([{ name :'bgimage1',maxCount:1},{ name :'bgimage2',maxCount:1},{ name :'bgimage3',maxCount:1},{ name :'bgimage4',maxCount:1},{ name :'bgimage5',maxCount:1},]);
 
         app.post('/upload',cpUpload, function(req, res){
-            console.log(req.user);
+            // console.log(req.user);    //uncomment this line after posts
             var title       = req.body.maintitle;
             var category    = req.body.my_select;
             var cover  = req.files[Object.keys(req.files)[0]];
-            var google_name      = req.user.google.email;
-            var facebook_name      = req.user.facebook.email;
+            // var google_name      = req.user.google.email; //uncomment this line after posts
+            // var facebook_name      = req.user.facebook.email; //uncomment this line after posts
 
-            if(google_name != undefined && facebook_name == undefined)
-                name = google_name;
-            else if(google_name == undefined && facebook_name != undefined)
-                name =facebook_name;
-            else name = "something";
+            // ************************************************
+            // Uncomment that section 
+            // ************************************************
+
+
+            // if(google_name != undefined && facebook_name == undefined)
+            //     name = google_name;
+            // else if(google_name == undefined && facebook_name != undefined)
+            //     name =facebook_name;
+            // else name = "something";
+            var name = "Polkacafe.com"
             var arr = [];
 
             var json = {};
-            for(var i=0,j=2; i<5; i++,j=j+2){
+            for(var i=0,j=2; i<10; i++,j=j+2){
                 var file = req.files[Object.keys(req.files)[i]];
                 var subtitle = req.body[Object.keys(req.body)[j]];
                 var content = req.body[Object.keys(req.body)[j+1]];

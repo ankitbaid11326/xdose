@@ -259,36 +259,39 @@
 		
 			<ul id="serie1" style="list-style-type:none; margin-top:0px; padding:0;">
 				<div class="container">
-	<div class="row">
-	{#posts}
-	<a href="/{._id}">
-	<div class="col-md-3">
-	{#cover}
-	<div class="card">
-  		<img src="/images/uploads/{.filename}">
-  	<div>
-  	{/cover}
-  		<div class="textcutter">
-     		<h2>{.title}</h2>
-     	</div>
-  <span>Source &nbsp;</span>
-   <span class="by">
-     {.user}
-    </span>
-  </div>
-</div>
-		
-	</div>
-	</a>
-	{/posts}
-	</div>
-</div>
+
+					<div class="row">
+					{#posts}
+					<a href="/{._id}">
+					<div class="col-md-3">
+					{#cover}
+					<div class="card">
+					  		<img src="/images/uploads/{.filename}">
+					  	<div>
+					  	{/cover}
+					  		<div class="textcutter">
+					     		<h4>{.title}</h4>
+					     	</div>
+					     	<div class="row well well-sm">
+						  		<span class="{.category}">Source &nbsp;</span>
+						   			<span class="by">
+						     	{.user}
+						    	</span>
+					  		</div>
+					  	</div>
+					</div>
+						
+					</div>
+					</a>
+					{/posts}
+					</div>
+			</div>
 
 			</ul>
 		
 		
 		
-		<div id="what_it_is" align="center" class="wow flipInX" data-wow-duration="1.5s" data-wow-delay="0.5s">It's All About<img src="images/beard1.png" style="width:100px; height:100px;"></div>
+		<!-- <div id="what_it_is" align="center" class="wow flipInX" data-wow-duration="1.5s" data-wow-delay="0.5s">It's All About<img src="images/beard1.png" style="width:100px; height:100px;"></div>
 		
 		<div id="capsule">
 			<ul id="circle_line" style="list-style-type:none; margin-top:0px; ">
@@ -322,9 +325,9 @@
 			</ul>
 		</div>
 		
-		</div>
+		</div> -->
 		
-		<div id="footer">
+		<!-- <div id="footer">
 				<div id="copyright"> Copyright <i class="fa fa-copyright"></i> 2015. All Rights Reserved | Designed and Developed by <i class="fa fa-desktop"></i></div>
 				
 				<ul id="privacy">
@@ -334,8 +337,8 @@
 					<li><a href="#" id="not_in_mob">Terms and Conditions</a></li>
 					<li><a href="#" id="not_in_mob">Privacy Policy</a></li>
 				</ul>
-			</div>
-		</div>
+			</div> -->
+		<!-- </div> -->
 		
 	</body>
 </html>
