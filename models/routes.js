@@ -8,8 +8,8 @@ module.exports = function(app, passport) {
     var smtpTransport = nodemailer.createTransport("SMTP",{
     service: "Gmail",
         auth: {
-            user: "christsam11326@gmail.com",
-            pass: "preamraj"
+            user: "xyz@abc.com",
+            pass: "abcd12345"
         }   
     });
 
